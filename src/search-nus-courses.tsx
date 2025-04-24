@@ -66,10 +66,7 @@ export default function Command() {
   });
 
   return (
-    <List
-      isLoading={isLoading}
-      searchBarPlaceholder={`Search for courses in ${acadYear.replace("-", "/")}`}
-    >
+    <List isLoading={isLoading} searchBarPlaceholder={`Search for courses in ${acadYear.replace("-", "/")}`}>
       {error || !data ? (
         <List.EmptyView icon={Icon.Bug} title="Error fetching course summaries" description="Please try again later." />
       ) : (
