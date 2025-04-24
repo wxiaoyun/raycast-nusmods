@@ -3,14 +3,7 @@ import { showFailureToast, useFetch } from "@raycast/utils";
 import { useCallback } from "react";
 import { currentAcadYear } from "../search-nus-courses";
 import { API_BASE_URL, WEBSITE_BASE_URL } from "../utils/constants";
-import {
-  CourseDetails,
-  CourseDetailsSchema,
-  CourseSummary,
-  Prereq,
-  SemesterData,
-  Timetable,
-} from "../utils/nusmods";
+import { CourseDetails, CourseDetailsSchema, CourseSummary, Prereq, SemesterData, Timetable } from "../utils/nusmods";
 
 const formatWorkload = (workload?: number[]) => {
   if (!workload) return null;
