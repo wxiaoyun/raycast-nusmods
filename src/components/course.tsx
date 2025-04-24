@@ -237,7 +237,9 @@ const CourseDetail: React.FC<{
             )}
             {data.fulfillRequirements && (
               <Detail.Metadata.TagList title="Fulfill Requirements">
-                {data.fulfillRequirements.map((req) => <Detail.Metadata.TagList.Item key={req} text={req} />)}
+                {data.fulfillRequirements.map((req) => (
+                  <Detail.Metadata.TagList.Item key={req} text={req} />
+                ))}
               </Detail.Metadata.TagList>
             )}
             <Detail.Metadata.Separator />
