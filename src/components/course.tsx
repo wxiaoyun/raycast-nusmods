@@ -7,7 +7,7 @@ import {
   CourseDetails,
   CourseDetailsSchema,
   CourseSummary,
-  PrereqTree,
+  Prereq,
   SemesterData,
   Timetable,
 } from "../utils/nusmods";
@@ -18,12 +18,12 @@ const formatWorkload = (workload?: number[]) => {
   return workload.map((hours, i) => `- ${categories[i]}: ${hours} hours`).join("\n");
 };
 
-const formatPrereqTree = (tree?: PrereqTree): string => {
+const formatPrereqTree = (tree?: Prereq): string => {
   if (!tree) return "";
 
   const sections: string[] = [];
 
-  const dfs = (node: PrereqTree | string, depth: number = 0) => {
+  const dfs = (node: Prereq | string, depth: number = 0) => {
     const indent = " ".repeat(depth * 2);
 
     if (typeof node === "string") {
