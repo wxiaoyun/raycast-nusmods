@@ -70,6 +70,7 @@ export default function Command() {
     <List
       isLoading={isLoading}
       filtering={false}
+      throttle
       pagination={pagination}
       onSearchTextChange={setSearchText}
       searchBarPlaceholder={`Search for courses in ${acadYear.replace("-", "/")}`}
